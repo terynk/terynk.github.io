@@ -21,6 +21,7 @@
   --orange-medium: #d8853f;
   --tan-medium: #f3ead8;
   --subHeader: rgba(0, 0, 0, 0.7);
+  --navBar-height: 85px;
 }
 
 body {
@@ -123,7 +124,7 @@ figure figcaption {
   #colorlib-aside {
     position: fixed;
     width: 100%;
-    height: 85px !important;
+    height: var(--navBar-height) !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1147,7 +1148,7 @@ body.offcanvas .colorlib-nav-toggle {
   }
 
   #colorlib-hero {
-    margin-bottom: 4em;
+    padding-top: var(--navBar-height);
   }
 
   #colorlib-hero .flexslider .flex-control-nav {
