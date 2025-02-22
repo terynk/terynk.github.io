@@ -98,6 +98,7 @@ figure figcaption {
   padding-bottom: 40px;
   float: left;
   width: 300px;
+  height: 100vh;
   position: fixed;
   overflow-y: scroll;
   z-index: 1001;
@@ -109,13 +110,43 @@ figure figcaption {
 
 @media screen and (max-width: 768px) {
   #colorlib-aside {
-    width: 300px;
-    -moz-transform: translateX(-300px);
-    -webkit-transform: translateX(-300px);
-    -ms-transform: translateX(-300px);
-    -o-transform: translateX(-300px);
-    transform: translateX(-300px);
-    padding-top: 4em;
+    position: fixed;
+    width: 100%;
+    height: 85px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #colorlib-aside .position {
+    display: none !important;
+  }
+
+  #colorlib-main-menu {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #colorlib-main-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+  }
+
+  #colorlib-main-menu ul li {
+    margin: 10px 10px;
+  }
+
+  #colorlib-aside .author-img,
+  .colorlib-footer {
+    display: none;
   }
 }
 
@@ -166,12 +197,6 @@ figure figcaption {
   text-align: center;
   margin: 0;
   padding: 0;
-}
-
-@media screen and (max-width: 768px) {
-  #colorlib-aside #colorlib-main-menu ul {
-    margin: 0 0 2em 0;
-  }
 }
 
 #colorlib-aside #colorlib-main-menu ul li {
@@ -250,13 +275,6 @@ figure figcaption {
   color: rgba(0, 0, 0, 0.5);
   padding: 0 20px;
   width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  #colorlib-aside .colorlib-footer {
-    position: relative;
-    bottom: 0;
-  }
 }
 
 #colorlib-aside .colorlib-footer span {
